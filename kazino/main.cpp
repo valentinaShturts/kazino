@@ -75,10 +75,6 @@ int QueueRing::GetCount()
 void QueueRing::Add(int c)
 {
 	if (!IsFull()) Wait[QueueLength++] = c;
-	else 
-	{
-		cout << "Queue is full, cannot add more elements." << endl;
-	}
 }
 
 bool QueueRing::Extract()
@@ -129,7 +125,6 @@ int main()
 	}
 
 	bool isExit = false;
-	char temp;
 	do
 	{
 		system("cls");
